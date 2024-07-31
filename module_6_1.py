@@ -13,7 +13,7 @@ class Mammal(Animal):
     def eat(self, food):
         if food.edible == False:
             print(f"{self.name} не стал есть {food.name}")
-            Animal.alive = False
+            self.alive = False
         else:
             print(f"{self.name} съел {food.name}")
             Animal.fed = True
@@ -22,7 +22,7 @@ class Predator(Animal):
     def eat(self, food):
         if food.edible == False:
             print(f"{self.name} не стал есть {food.name}")
-            Animal.alive = False
+            self.alive = False
         else:
             print(f"{self.name} съел {food.name}")
             Animal.fed = True
